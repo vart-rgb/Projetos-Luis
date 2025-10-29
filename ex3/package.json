@@ -11,6 +11,7 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "@tabler/icons": "^3.35.0"
+    "@tabler/icons": "^3.35.0",
+    "simple-icons": "^15.17.0"
   }
 }
