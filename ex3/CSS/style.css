@@ -9,6 +9,9 @@ body {
   height: 30px;
   background-color: #007;
   color: white;
+  position: absolute;
+  top: 15px;
+  left: 280px;
 }
 
 #contacto,

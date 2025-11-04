@@ -1,7 +1,7 @@
 var pessoais = document.getElementById("pessoais")
 var contacto = document.getElementById("contacto")
 var opcoes = document.getElementById("resto")
-var password = document.getElementById("senha")
+var senha = document.getElementById("senha")
 var ReginForm = document.getElementById("ReginForm")
 const loginForm = document.getElementById("loginForm")
 
@@ -17,7 +17,7 @@ function mostrarSecao(secao) {
   pessoais.style.display = "none"
   contacto.style.display = "none"
   opcoes.style.display = "none"
-  password.style.display = "none"
+  senha.style.display = "none"
 
   switch (secao) {
     case "contacto":
@@ -26,8 +26,8 @@ function mostrarSecao(secao) {
     case "opcoes":
       opcoes.style.display = "block"
       break
-    case "password":
-      password.style.display = "block"
+    case "senha":
+      senha.style.display = "block"
       break
     default:
       pessoais.style.display = "block"
@@ -41,36 +41,36 @@ next2.addEventListener("click", function() {
   mostrarSecao("opcoes")
 })
 next3.addEventListener("click", function() {
-  mostrarSecao("password")
+  mostrarSecao("senha")
 })
 
 function VoltarSecao(secao) {
   pessoais.style.display = "none"
   contacto.style.display = "none"
   opcoes.style.display = "none"
-  password.style.display = "none"
+  senha.style.display = "none" 
 
   switch (secao) {
     case "pessoais":
-      pessoais.style.display = "none"
+      pessoais.style.display = "block"
       break
     case "contacto":
-      contacto.style.display = "none"
+      contacto.style.display = "block"
       break
     case "opcoes":
-      opcoes.style.display = "none"
+      opcoes.style.display = "block"
       break
     default:
-      password.style.display ="block"
+      console.log("não tenha para dizer")
   }
 }
 
-next1.addEventListener("click", function() {
-  mostrarSecao("pessoais")
+back.addEventListener("click", function() {
+  VoltarSecao("pessoais")
 })
-next2.addEventListener("click", function() {
-  mostrarSecao("contacto")
+back2.addEventListener("click", function() {
+  VoltarSecao("contacto")
 })
-next3.addEventListener("click", function() {
-  mostrarSecao("opcoes")
+back3.addEventListener("click", function() {
+  VoltarSecao("opcoes")
 })

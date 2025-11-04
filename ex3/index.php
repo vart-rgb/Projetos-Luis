@@ -9,7 +9,7 @@
     <link href="CSS/style.css" rel="stylesheet">
   </head>
   <body>
-    <form id="Regiform" action="index.php" method="get">
+    <form id="Regiform" action="main/main.php" method="get">
       <h1>Registra-se</h1>
       <section id="pessoais">
         <input type="text" name="FirstName" required placeholder="Digite seu nome">
@@ -20,7 +20,7 @@
           <option value="Masculino">Masculino</option>
           <option value="Feminino">Feminino</option>
         </select>
-        <input type="date" id="date">
+        <input type="date" id="date" name="data">
         <button type="button" id="next1" class="next">Proximo</button>
       </section>
 
@@ -55,7 +55,7 @@
           <option value="12ª">12ª</option>
           <option value="13ª">13ª</option>
         </select>
-        <button type="button" id="next2" class="next">Proximo</button>
+        <button type="button" id="next3" class="next">Proximo</button>
       </section>
       <section id="senha"> 
         <button type="button" id="back3" class="btn">
