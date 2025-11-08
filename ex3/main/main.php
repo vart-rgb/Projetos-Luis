@@ -6,9 +6,9 @@ $Fathername = $_GET["FatherName"];
 $Mothername = $_GET["MotherName"];
 $Sex = $_GET["sexo"];
 if ($Sex === "Masculino") {
-  $Sex = "pictures/male.png";
+  $Sex = "pictures/male2.jpg";
 } else {
-  $Sex = "pictures/female.png";
+  $Sex = "pictures/female2.jpg";
 };
 
 $Birthdate = $_GET["data"];
@@ -23,6 +23,7 @@ $classe = $_GET["classe"];
 //senha
 $senha = $_GET["senha"]; 
 $confirm_senha = $_GET["confirm_senha"];
+// <?php echo file_get_contents("../icons/user-graduate.svg");
 ?>
 <!-- <!DOCTYPE html> -->
 <html lang="pt-br">
@@ -34,10 +35,22 @@ $confirm_senha = $_GET["confirm_senha"];
   </head>
 <body>
   <main>
-    <h1>Ficha do aluno</h1>
-    <img src="<?php echo $Sex?>" id="perfil" alt="vasco">
-    <section>
-      
+    <div id="navbar">
+      <h1>Ficha do aluno</h1>
+      <p id="user-graduate">
+        <?
+          echo file_get_contents("../icons/user-graduate.svg");
+        ?>
+      </p>
+      <h1>Ficha do aluno</h1>
+    </div>
+    <div id="perfil">
+      <img src="<?php echo $Sex?>"  alt="vasco">
+    </div>  
+    <section id="dados">
+      <nav>
+        <p>teste</p>
+      </nav>
     </section>
   </main>
   <script src="script/main.js"></script>
