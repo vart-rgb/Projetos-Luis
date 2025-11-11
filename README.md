@@ -24,4 +24,5 @@ Clone este repo no lugar certo:
 ```bash
 git clone https://github.com/vart-rgb/Web-Projetos.git
 ```
-
+Principal objetivo deste repositorio é:
+Parar apenas quando um app web estiver criado
