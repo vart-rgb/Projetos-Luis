@@ -28,7 +28,7 @@
         <button type="button" id="back1" class="btn">
           <?php echo file_get_contents("icons/arrow-left.svg"); ?>
         </button>
-
+        <input type="text" name="nature" placeholder="De que provincia és?" required>
         <input type="number" required name="number" placeholder="Digite seu número de telefone">
         <input type="email" name="email" placeholder="exemplo@gmail.com" required>
         <input type="text" name="location" placeholder="Onde voçê mora?" required>

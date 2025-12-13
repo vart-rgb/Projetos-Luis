@@ -5,24 +5,23 @@ $Lastname = $_GET["LastName"];
 $Fathername = $_GET["FatherName"];
 $Mothername = $_GET["MotherName"];
 $Sex = $_GET["sexo"];
+$sexo2 = $_GET["sexo"];
 if ($Sex === "Masculino") {
-  $Sex = "pictures/male4.jpg";
+    $sexo2 = "../main/pictures/male.jpg";
 } else {
-  $Sex = "pictures/female2.jpg";
+    $sexo2 = "../main/pictures/female.jpg";
 };
-// ("../main/pictures/")
+
 $Birthdate = $_GET["data"];
 // localização, email e numero de telefone
 $number = $_GET["number"];
 $location = $_GET["location"];
+$nature = $_GET["nature"];
 $email = $_GET["email"];
 // dados academicos
 $turno = $_GET["turno"];
 $curso = $_GET["curso"];
 $classe = $_GET["classe"];
-//senha
-$senha = $_GET["senha"]; 
-$confirm_senha = $_GET["confirm_senha"];
 // <?php echo file_get_contents("../icons/user-graduate.svg");
 ?>
 <!-- <!DOCTYPE html> -->
@@ -38,7 +37,7 @@ $confirm_senha = $_GET["confirm_senha"];
     <div id="navbar">
       <h1>Ficha do aluno</h1>
       <p id="user-graduate">
-        <?
+        <?php
           echo file_get_contents("../icons/user-graduate.svg");
         ?>
       </p>
@@ -50,18 +49,145 @@ $confirm_senha = $_GET["confirm_senha"];
       </button>
       <button type="button" id="envelope" class="btn">
         <?php
-          echo file_get_contents("../icons/envelope.svg");  
+          echo file_get_contents("../icons/envelope-fill.svg");
         ?>
         Contratar
       </button>
     </div>
     <div id="perfil">
-      <img src="<?php echo $Sex?>"  alt="vasco">
+      <img src="<?php echo $sexo2;?>"  alt="vasco">
     </div>  
-    <section id="dados">
-      <nav>
-        <p>Dados pessoais</p>
-      </nav>
+    <section>
+      <!-- dados do usuario -->
+      <article id="dados" class = "implements">
+        <div class="bar">
+          <p id="first-child">
+            Dados pessoais  
+          </p>
+        </div>
+        <div class="info">
+          <p id="birth" class="first-icons">
+            <?php echo file_get_contents("../icons/cake2-fill.svg");?>
+          </p>
+          <p class="info_user">
+            <?php echo $Birthdate;?>
+          </p>
+        </div>
+        <div class="info">
+          <p id="genero" class="first-icons">
+            <?php echo file_get_contents("../icons/gender-bigender.svg");?>
+          </p>
+          <p class="info_user">
+            <?php echo $Sex;?>
+          </p>
+        </div>
+        <div class="info">
+          <p id="icon_nature" class="first-icons">
+            <?php echo file_get_contents("../icons/geo-alt-fill.svg");?> 
+          </p>
+          <p class="info_user">
+              <?php echo $nature;?>
+          </p>
+        </div>
+      </article>
+        <!-- dados da familia do usuario -->
+      <article id="family_usr" class="implements">
+        <div class="bar">
+          <p id="second-child">
+            familia
+          </p>
+        </div>
+        <div class="info">
+          <p id="Father" class="second-icons">
+            <?php echo file_get_contents("../icons/person-standing.svg");?>
+          </p>
+          <p class="family_user">
+            <?php echo $Fathername;?>
+          </p>
+        </div>
+        <div class="info">
+          <p id="Mother" class="second-icons">
+            <?php echo file_get_contents("../icons/person-standing-dress.svg");?>
+          </p>
+          <p class="family_user">
+            <?php echo $Mothername;?>
+          </p>
+        </div>
+        <div class="info">
+          <p id="usr_name" class="second-icons">
+            <?php echo file_get_contents("../icons/user-alt.svg");?> 
+          </p>
+          <p class="family_user">
+            <?php echo $Firstname, $Lastname;?>
+          </p>
+        </div>
+      </article>
+
+      <!-- dados academicos do usuario -->
+      <article id="usr_academcs" class="implements">
+        <div class="bar">
+          <p id="third-child">
+            dados academicos
+          </p>
+        </div>
+        <div class="info">
+          <p  class="third-icons">
+            <?php echo file_get_contents("../icons/stack.svg");?>
+          </p>
+          <p class="academic_user">
+            <?php echo $classe;?>
+          </p>
+        </div>
+        <div class="info">
+          <p id="book" class="third-icons">
+            <?php echo file_get_contents("../icons/book.svg");?>
+          </p>
+          <p class="academic_user">
+            <?php echo $curso;?>
+          </p>
+        </div>
+        <div class="info">
+          <p  class="third-icons">
+            <?php echo file_get_contents("../icons/clock-fill.svg");?> 
+          </p>
+          <p class="academic_user">
+            <?php echo $turno;?>
+          </p>
+        </div>
+        </article>
+
+        <!--mais dados do usuario-->
+      <article id="mais_usr" class="implements">
+        <div class="bar">
+          <p id="forth-child">
+            conctato
+          </p>
+        </div>
+        <div class="info">
+          <p  class="forth-icons">
+            <?php echo file_get_contents("../icons/house-door-fill.svg");?>
+          </p>
+          <p class="more_about_user">
+            <?php echo $location; ?>
+          </p>
+        </div>
+        <div class="info">
+          <p  class="forth-icons">
+            <?php echo file_get_contents("../icons/telephone-fill.svg");?>
+          </p>
+          <p class="more_about_user">
+            <?php echo $number; ?>
+          </p>
+        </div>
+        <div class="info">
+            <p  class="forth-icons">
+            <?php echo file_get_contents("../icons/envelope-fill.svg");?> 
+          </p>
+          <p class="more_about_user">
+            <?php echo $email; ?>
+          </p>
+        </div>
+      </article>
     </section>
   </main>
   <script src="script/main.js"></script>
