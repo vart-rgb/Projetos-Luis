@@ -1,5 +1,12 @@
-body {
+* {
+  padding: 0;
+  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100dvh;
 }
 
 .btn {
@@ -10,7 +17,7 @@ body {
   background-color: #007;
   color: white;
   position: absolute;
-  top: 15px;
+  top: -73px;
   left: 280px;
 }
 
@@ -22,13 +29,22 @@ body {
 
 h1 {
   color: #007;
+  margin-left: 8px;
+  margin-bottom: 10px;
+  position: relative;
+  top: 10px;
+}
+
+section {
+  position: relative;
+  top: 40px;
 }
 
 input {
   width: 300px;
   height: 40px;
   position: relative;
-  left: 20px;
+  left: 30px;
   margin-bottom: 10px;
   border-radius: 5px;
   outline: none;
@@ -40,7 +56,7 @@ select {
   width: 300px;
   height: 40px;
   position: relative;
-  left: 20px;
+  left: 30px;
   border: 1px solid gray;
   border-radius: 5px;
   margin-bottom: 10px;
@@ -56,6 +72,16 @@ select {
   border: 1px solid #007;
   border-radius: 5px;
   position: relative;
-  left: 10vw;
+  left: 15vw;
   margin-top: 1vh;
+}
+
+span {
+  color: red;
+  position: relative;
+  left: 8%;
+  top: -6px;
+  font-size: 13px;
+  font-weight: bold;
+  display: none;
 }

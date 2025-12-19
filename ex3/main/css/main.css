@@ -7,6 +7,31 @@
 body {
   width: 100vw;
   height: 100vh;
+  ;
+}
+
+header {
+  height: 40px;
+}
+
+.theme {
+  width: 50px;
+  height: 30px;
+  position: relative;
+  left: 85vw;
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 5px;
+  top: 5px;
+}
+
+#sun {
+  display: none;
+  position: relative;
+  top: -25px;
+  border: 1px solid white;
+  color: white;
+  transition: 1s linear;
 }
 
 h1 {
@@ -18,7 +43,7 @@ h1 {
   left: 15px;
 }
 
-main {
+#main {
   position: relative;
   left: 10vw;
   top: 20px;
@@ -37,7 +62,7 @@ main {
   position: relative;
   left: 0%;
   text-align: center;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 #perfil {
@@ -78,7 +103,7 @@ main {
   align-items: center;
   display: flex;
   text-align: center;
-  background-color: white;
+  background-color: transparent;
   border: 1px solid #007;
 }
 
@@ -101,7 +126,6 @@ main {
   width: 98.5%;
   height: 40px;
   border-radius: 2.2px;
-  box-shadow: 37px, 4px, 1px, black;
   text-align: center;
 }
 
