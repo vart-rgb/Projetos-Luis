@@ -3,14 +3,13 @@ ex3/main/.undodir/
 ex3/*.out
 ex3/*.sh
 .php-cs-fixer.cache
-.undodir/
+ex3/.php-cs-fixer.dist.php
+*.json
 ex2/.undodir/
 ex2/*.sh
 ex2/*.out
-fontawesome-free-7.1.0-desktop/
 *.sh
 *.out
 ex2/*.json
-
 ex3/*.lock
 ex3/*.json

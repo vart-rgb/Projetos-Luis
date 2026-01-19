@@ -1,16 +1,26 @@
 <!-- <!DOCTYPE html> -->
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
   <link href="CSS/style.css" rel="stylesheet">
-  <link href="CSS/media.css" rel="stylesheet" media="screen">
+  <!--  <link href="CSS/media.css" rel="stylesheet" media="screen">-->
 </head>
 
 <body>
-  <form id="Regiform" action="main/main.php" method="get">
+  <form id="Loginform" action="back/API.php" method="get">
+    <h1>Bem vindo de volta</h1>
+    <input type="text" id="username" name="nome" required />
+    <input type="password" id="password" name="password" required />
+    <label for="chek" id="remember">Lembre me</label>
+    <input type="checkbox" id="chek">
+    <p id="forgot"><a href="#">Esqueceu a senha?</a></p>
+    <input type="submit" id="send" value="Enviar">
+    <p id="conta">ainda não tem conta? <a href="#" id="cada">Cadasatre-se</a> já</p>
+  </form>
+  <form id="Regiform" action="back/API.php" method="get">
     <h1>Registra-se</h1>
     <section id="pessoais">
       <input type="text" id="FirstName" name="FirstName" required placeholder="Digite seu nome">
@@ -55,7 +65,8 @@
       <select name="curso" id="curso">
         <option value="Informatica">Informatica</option>
         <option value="Enfermagem">Enfermagem</option>
-        <option value="Contabilidade">Direito</option>
+        <option value="Contabilidade">Contabilidade</option>
+        <option value="Direito">Direito</option>
         <option value="Eletrecidade">Eletrecidade</option>
       </select>
       <select id="classe" name="classe">

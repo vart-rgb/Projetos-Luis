@@ -25,4 +25,7 @@ Clone este repo no lugar certo:
 git clone https://github.com/vart-rgb/Web-Projetos.git
 ```
 Principal objetivo deste repositorio é:
-Parar apenas quando um app web estiver criado
+Criar diversos mini-apps web para almentar as skills como programador
+
+Copyright (c) 2025 vart-rgb. TODOS DIREITOS RESERVADO.
+ESTE PROJETO NÃO PODERÁ SER USADO FORA DO CONTEXTO SEM UMA PREVIA PERMISSÃO DO AUTOR

@@ -1,0 +1,33 @@
+ insert into users (
+   firstname,
+   lastname,
+   fathername,
+   mothername,
+   sex,
+   data,
+   nature,
+   cellphone,
+   email,
+   location,
+   turno,
+   curso,
+   class,
+   password,
+   confirm_password)
+ values
+   (
+   'Jonh',
+   'Paul',
+   'Paul Mercer',
+   'Joana Edge',
+   'masculino',
+   '2007/12/31',
+   'Luanda',
+   950964800,
+   'jonhpaul@vasco.com',
+   'Rua avenida Vasco3',
+   'Tarde',
+   'Enfermagem',
+   10,
+   'abcdfghij',
+   'abcdfghij');
