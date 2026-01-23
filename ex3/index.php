@@ -88,7 +88,7 @@
       <input type="submit" id="send" value="Enviar">
     </section>
   </form>
-  <script src="script/script.js"></script>
+  <script src="script/file.js"></script>
   <script src="node_modules/eruda/eruda.js"></script>
   <script>
     eruda.init();
