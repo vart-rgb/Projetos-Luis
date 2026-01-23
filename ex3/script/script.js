@@ -106,11 +106,11 @@ document.addEventListener('DOMContentLoaded', () => {
       firstName.style.border = "1px solid red"
       firstname_error.style.display = "block"
       firstname_error.innerHTML = "precisa ter 3 caracteres no minimo"
-      return true
+
     } else {
       firstName.style.border = "1px solid yellowgreen"
       firstname_error.style.display = "none"
-      return false
+
     }
   }
 
@@ -119,11 +119,11 @@ document.addEventListener('DOMContentLoaded', () => {
       lastName.style.border = "1px solid red"
       lastname_error.style.display = "block"
       lastname_error.innerHTML = "precisa ter 3 caracteres no minimo"
-      return true
+
     } else {
       lastName.style.border = "1px solid yellowgreen"
       lastname_error.style.display = "none"
-      return false
+
     }
   }
 
@@ -132,11 +132,11 @@ document.addEventListener('DOMContentLoaded', () => {
       fatherName.style.border = "1px solid red"
       fathername_error.style.display = "block"
       fathername_error.innerHTML = "precisa ter 3 caracteres no minimo"
-      return true
+
     } else {
       fatherName.style.border = "1px solid yellowgreen"
       fathername_error.style.display = "none"
-      return false
+
     }
   }
 
@@ -145,12 +145,12 @@ document.addEventListener('DOMContentLoaded', () => {
       motherName.style.border = "1px solid red"
       mothername_error.style.display = "block"
       mothername_error.innerHTML = "precisa ter 3 caracteres no minimo"
-      return true
+
     }
     else {
       motherName.style.border = "1px solid yellowgreen"
       mothername_error.style.display = "none"
-      return false
+
     }
   }
 
@@ -164,12 +164,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (array.includes(nature.value.trim())) {
       nature.style.border = "1px solid yellowgreen"
       nature_error.style.display = "none"
-      return false
+
     } else {
       nature_error.style.display = "block"
       nature_error.innerHTML = "Esta Província não existe"
       nature.style.border = "1px solid red"
-      return true
+
     }
   }
 
@@ -179,18 +179,15 @@ document.addEventListener('DOMContentLoaded', () => {
         number_error.style.display = "block"
         number.style.border = "1px solid red"
         number_error.innerHTML = "precisa de 9 digitos apenas!"
-        return true
       } else {
         number_error.style.display = "none"
         number.style.border = "1px solid yellowgreen"
-        return false
       }
     }
     else {
       number_error.style.display = "block"
       number.style.border = "1px solid red"
       number_error.innerHTML = "o primeiro digito deve ser 9"
-      return true
     }
   }
 
@@ -200,12 +197,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (teste) {
       email.style.border = "1px solid yellowgreen"
       email_error.style.display = "none"
-      return false
+
     } else {
       email_error.style.display = "block"
       email_error.innerHTML = "E-mail invalido"
       email.style.border = "1px solid red"
-      return true
+
     }
   }
   function input_password() {
@@ -213,12 +210,11 @@ document.addEventListener('DOMContentLoaded', () => {
       passwd_error.style.display = "block"
       passwd_error.innerHTML = "para uma senha mais segura, use 8 digitos"
       passwd.style.border = "1px solid red"
-      return true
+
     }
     else {
       passwd.style.border = "1px solid yellowgreen"
       passwd_error.style.display = "none"
-      return false
     }
   }
   function input_confirm_password() {
@@ -226,12 +222,11 @@ document.addEventListener('DOMContentLoaded', () => {
       confirm_passwd.style.border = "1px solid red"
       confirm_passwd_error.style.display = "block"
       confirm_passwd_error.innerHTML = "a senha introduzida não condiz com anterior"
-      return true
 
     } else {
       confirm_passwd.style.border = "1px solid yellowgreen"
       confirm_passwd_error.style.display = "none"
-      return false
+
     }
   }
   firstName.addEventListener("input", input_firstName);
@@ -256,35 +251,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (isValidate_firstName && isValidate_lastName && isValidate_fatherName && isValidate_motherName && isValidate_nature && isValidate_number && isValidate_email && isValidate_password && isValidate_confirm_password) {
       event.preventDefault();
-      alert("teste")
     } else {
       event.preventDefault();
       // para ter certeza que os dados estao certos
-      const fname = firstName.value.trim()
-      const lname = lastName.value.trim()
-      const Father = fatherName.value.trim()
-      const Mother = motherName.value
-      const nature2 = nature.value.trim()
-      const Phone = number.value.trim()
-      const adrress_email = email.value.trim()
-      const date = birthday.value.trim()
-      const localization = location.value
-      const course = curso.value
-      const class1 = classe.value
-      const bout = turno.value
-      const password = passwd.value
-      const confirm_password = confirm_passwd.value
       // objecto que vai se transformar em um arquivo JSON
       const object = {
-        firstname: fname, lastname: lname,
-        fathername: Father, mothername: Mother,
-        nature: nature2, number: Phone,
-        email: adrress_email, passwd: password, confirm_passwd: confirm_password,
-        birthday: date, location: localization,
-        grade: class1, curso: course, periodo: bout
+        firstname: firstName.value.trim(), lastname: lastName.value.trim(),
+        fathername: fatherName.value.trim(), mothername: motherName.value.trim(),
+        provincia: nature.value.trim(), number: number.value.trim(),
+        email: email.value.trim(), passwd: passwd.value.trim(), confirm_passwd: confirm_passwd.value.trim(),
+        birthday: birthday.value.trim(), address: location.value.trim(),
+        grade: classe.value.trim(), curso: curso.value.trim(), periodo: turno.value.trim()
       }
-      let jsonString = JSON.stringify(object)
-      console.log(jsonString, Father)
       // conexao e envio de dados do formulario com API
       // e retorno de resposta da API
       fetch("back/API.php", {   // ← ajuste o caminho se necessário
@@ -292,7 +270,7 @@ document.addEventListener('DOMContentLoaded', () => {
         headers: {
           "Content-Type": "application/json; charset=utf-8"
         },
-        body: jsonString
+        body: JSON.stringify(object)
       })
         .then(resposta => {
           if (resposta.ok) {
