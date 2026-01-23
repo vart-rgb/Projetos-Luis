@@ -264,8 +264,7 @@ document.addEventListener('DOMContentLoaded', () => {
         grade: classe.value.trim(), curso: curso.value.trim(), periodo: turno.value.trim()
       }
       // conexao e envio de dados do formulario com API
-      // e retorno de resposta da API
-      fetch("back/API.php", {   // ← ajuste o caminho se necessário
+      fetch("back/API.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json; charset=utf-8"
