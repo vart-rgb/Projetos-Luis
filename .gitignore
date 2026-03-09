@@ -13,3 +13,4 @@ ex2/*.out
 ex2/*.json
 ex3/*.lock
 ex3/*.json
+ex3/.env
